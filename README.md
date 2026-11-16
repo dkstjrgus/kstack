@@ -20,6 +20,10 @@ tstack whole and only the parts of pstack that fit that work.
   `why`, `teach`, `figure-it-out`, `automate-me`.
 - **`principles`**, eight of pstack's principles merged into one skill and
   widened from code to any work.
+- **`potato-mode`**, my working conventions, built with `automate-me` from my
+  own sessions. It replaces pstack's `poteto-mode`: replies, delegation (the
+  main thread is the only orchestrator), review before shipping, and content
+  and file rules. It runs only when called (`/potato-mode`).
 
 **`unslop` is the center of the stack.** It cuts AI tells from writing, and it
 makes outputs much easier to read. Agents can call it on their own, and
@@ -35,9 +39,9 @@ and the commit it came from. None of it is installed.
 ## Install
 
 ```bash
-git clone https://github.com/dkstjrgus/tstack-fork
-cp -R tstack-fork/skills/* ~/.claude/skills/   # Claude Code
-cp -R tstack-fork/skills/* ~/.codex/skills/    # Codex
+git clone https://github.com/dkstjrgus/kstack
+cp -R kstack/skills/* ~/.claude/skills/   # Claude Code
+cp -R kstack/skills/* ~/.codex/skills/    # Codex
 ```
 
 tstack's requirements apply: an authenticated `gh`, `python3` for `babysit-pr`, and other
