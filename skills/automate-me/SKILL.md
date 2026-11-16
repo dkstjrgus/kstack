@@ -36,11 +36,12 @@ Locate the active workspace's transcripts before fanning out. Use only that work
 - **Codex:** `~/.codex/sessions/YYYY/MM/DD/rollout-*.jsonl`. Keep only files whose first line has `payload.cwd` equal to the workspace path.
 - **Other harnesses:** the harness's session directory for this workspace.
 
-Survey recent agent conversations within that scope for recurring patterns. Run multiple parallel subagents across slices of history (e.g. last 2-4 weeks, split into 3 slices so each has enough material). Pick each subagent's reasoning level and fast or standard speed for the job, per the Subagents section of the **poteto-mode** skill. Each slice mining subagent reads transcripts from the workspace-scoped path the parent provides, looks for the signals below, and returns a short structured list of patterns it saw with evidence pointers. Default signals worth hunting:
+Survey recent agent conversations within that scope for recurring patterns. Run multiple parallel subagents across slices of history (e.g. last 2-4 weeks, split into 3 slices so each has enough material). Pick each subagent's reasoning level for the job: lower for routine reading, higher for judgment. Each slice mining subagent reads transcripts from the workspace-scoped path the parent provides, looks for the signals below, and returns a short structured list of patterns it saw with evidence pointers. Default signals worth hunting:
 
 - Response preferences (length, tone, format, "dumb it down" corrections)
 - Delegation habits (subagents, models, specialized workflows, parallelism)
 - Verification posture (what "done" means, unit tests vs live repro, reviewers)
+- Document conventions (formats, templates, languages, how sources are cited)
 - Code and prose discipline (style, principles cited, lint/format tools)
 - Process conventions (worktrees, commits, PRs, review/merge tooling)
 - Meta preferences (fixing skills mid-task, proposing new ones)
@@ -68,7 +69,9 @@ Group the combined signals into sections. Common ones (use only what applies):
 - **Process**: git worktrees, commits, PRs, review/merge tooling.
 - **Skills**: skill-authoring habits, fix-the-skill-first, proposing new skills.
 
-The **poteto-mode** skill shows the shape. Read it for granularity. Don't copy its content. The user's rules are not the same as poteto-mode's.
+poteto's own mode shows the shape: [poteto-mode](https://github.com/backnotprop/pstack/blob/main/skills/poteto-mode/SKILL.md). Read it for granularity. Don't copy its content. The user's rules are not the same as poteto-mode's.
+
+In this stack the user's mode replaces poteto-mode. Route to the skills this stack keeps: tstack's `file-pr`, `babysit-pr`, `full-send` and `full-stop` for PR work, the **principles** skill, and **figure-it-out** for problems no other skill fits.
 
 ### 4. Draft the skill
 

@@ -75,6 +75,11 @@ reproduction, a screenshot. Use the most direct proof the change allows:
 - For UI and runtime behavior, run the app and look at the change. Green mocked
   tests do not prove that the user experience works. Attach screenshots to the
   PR when they help and you have a way to upload them.
+- For a document or other written output (a report, spec, slide deck, or
+  converted file), open the finished file the way its reader will see it.
+  Check that it opens and renders, that every fact and figure matches its
+  source, and that it covers everything the request asked for. A file that
+  only looks right in its source form is not proof.
 
 When you cannot find a way to prove a change, you do not have full confidence.
 Ask the user.

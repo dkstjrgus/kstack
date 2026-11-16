@@ -32,6 +32,18 @@ instructions mark a delegate as non-blocking, do not wait for it; treat a
 late result as feedback and do not record its score.
 
 For a code review, ask each delegate for a score out of 10.
+
+For a document review, ask each delegate to score it out of 10 against:
+
+- **Accuracy:** every fact and figure matches its source.
+- **Completeness:** it covers what the request asked for, and nothing it
+  didn't.
+- **Structure:** a reader finds the answer first and can follow the rest.
+- **Clarity:** plain words, short sentences, no filler, for its intended
+  reader.
+
+Give delegates the document as its reader sees it (rendered, not source) and
+the sources it draws on.
 Count each full review pass as one round.
 A fresh review after fixes starts a new round.
 
