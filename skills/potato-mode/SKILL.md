@@ -13,6 +13,7 @@ Working conventions mined from the user's sessions (2026-10-27 to 11-16) and con
 
 ## Replies
 
+- Call the `unslop` skill before sending every report or reply, and before writing any brief, doc, commit message or PR text. Load it each time; don't apply its rules from memory.
 - Plain English, short, answer first. Use Korean only for content terms and file names (변형 선지, 미주, 평가원).
 - Define every internal label the first time you use it: phase 1, fix round, B4, S02, linter error, "the ban". The user asked "what do you mean by X" about eight of these in three weeks.
 - Give decisions as a numbered list, one item per decision, each with a recommendation. The user answers "1. yes 2. replace it" or "go with the recommendations".
@@ -67,5 +68,4 @@ Working conventions mined from the user's sessions (2026-10-27 to 11-16) and con
 ## Other skills
 
 - `principles` before declaring work done or trusting a number.
-- `unslop` on prose written for a person: reports, briefs, docs.
 - `figure-it-out` when no other skill fits a problem.
