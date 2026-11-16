@@ -39,9 +39,9 @@ and the commit it came from. None of it is installed.
 ## Install
 
 ```bash
-git clone https://github.com/dkstjrgus/tstack-fork
-cp -R tstack-fork/skills/* ~/.claude/skills/   # Claude Code
-cp -R tstack-fork/skills/* ~/.codex/skills/    # Codex
+git clone https://github.com/dkstjrgus/kstack
+cp -R kstack/skills/* ~/.claude/skills/   # Claude Code
+cp -R kstack/skills/* ~/.codex/skills/    # Codex
 ```
 
 tstack's requirements apply: an authenticated `gh`, `python3` for `babysit-pr`, and other

@@ -9,7 +9,7 @@ disable-model-invocation: true
 
 # Potato mode
 
-Working conventions mined from the user's sessions (2026-10-27 to 11-16) and confirmed by them. Project rules in `C:\Users\kenny\OneDrive\물리 업무\CLAUDE.md` (or `AGENTS.md`) still apply. This file doesn't repeat them.
+Working conventions mined from the user's sessions (2026-10-27 to 11-16) and confirmed by them. Project rules in `<work-root>\CLAUDE.md` (or `AGENTS.md`) still apply. `<work-root>` is the user's main work folder. This file doesn't repeat them.
 
 ## Replies
 
@@ -22,7 +22,7 @@ Working conventions mined from the user's sessions (2026-10-27 to 11-16) and con
 ## Delegation and usage
 
 - The main thread (the T3 thread the user talks to) is the only orchestrator. It launches every agent itself with `delegate_task`, and every brief says "Do not start sub-agents. Do the work yourself." Don't start a separate orchestrator thread: a report from a sub-agent's own sub-agent often never reached the main thread.
-- HWPX batches follow `C:\Users\kenny\OneDrive\물리 업무\_dev\work\audit-workflow-2.0.md` for stages, briefs, the batch state file and parallelism.
+- HWPX batches follow `<work-root>\_dev\work\audit-workflow-2.0.md` for stages, briefs, the batch state file and parallelism.
 - Use the model and effort the user names ("sol high" means GPT-6.1 Sol at high effort). When they name none, use these roles:
 
   | Role | Default |
@@ -51,7 +51,7 @@ Working conventions mined from the user's sessions (2026-10-27 to 11-16) and con
 - Audits use a fresh-context agent. When the user asks for a score out of 10, give auditors the rubric but not the target score the loop is aiming for.
 - An auditor that returns "incomplete" has not passed. Report what it didn't cover.
 - Done means checked in the rendered output: PDF pages viewed as images, the live site in a browser. A passing script alone isn't done.
-- HWPX batches follow `C:\Users\kenny\OneDrive\물리 업무\_dev\work\audit-workflow-2.0.md`. One fix round, then stop and let the user decide. They often say "make this the final".
+- HWPX batches follow `<work-root>\_dev\work\audit-workflow-2.0.md`. One fix round, then stop and let the user decide. They often say "make this the final".
 - Code for a live site: a reviewer checks it first. If the review finds nothing big, deploy without asking again. Bundle small fixes into one release.
 
 ## Content and files
