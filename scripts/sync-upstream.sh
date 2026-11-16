@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Copies tstack and pstack into this repo's layout, exactly as published.
 # Run it on the `upstream` branch, commit, then merge `upstream` into main.
+# Skills named in skills-cut.txt are left out of skills/.
 # Usage: scripts/sync-upstream.sh [tstack-ref] [pstack-ref]
 set -euo pipefail
 
@@ -11,6 +12,7 @@ PSTACK_REF=${2:-main}
 
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 TMP=$(mktemp -d)
+CUT=$(grep -v -e '^#' -e '^$' "$ROOT/skills-cut.txt" 2>/dev/null || true)
 trap 'rm -rf "$TMP"' EXIT
 
 fetch() {
@@ -35,7 +37,12 @@ sync_skills() {
     done <"$manifest"
   fi
   for dir in "$src"/skills/*/; do
-    replace_dir "$dir" "$ROOT/skills/$(basename "$dir")"
+    skill=$(basename "$dir")
+    if grep -qxF "$skill" <<<"$CUT"; then
+      rm -rf "${ROOT:?}/skills/$skill"
+    else
+      replace_dir "$dir" "$ROOT/skills/$skill"
+    fi
   done
 }
 
@@ -46,7 +53,7 @@ sync_rest() {
   mkdir -p "$dst"
   for entry in "$TMP/$name"/* "$TMP/$name"/.[!.]*; do
     [[ -e $entry ]] || continue
-    case $(basename "$entry") in skills | docs | agents) continue ;; esac
+    [[ $(basename "$entry") == skills ]] && continue
     cp -R "$entry" "$dst/"
   done
   ls -1 "$TMP/$name/skills" >"$dst/SKILLS.txt"
@@ -71,10 +78,6 @@ fi
 mkdir -p "$ROOT/skills"
 sync_skills tstack
 sync_skills pstack
-
-# pstack skills link to ../../docs/, so its docs and subagents sit at the repo root.
-replace_dir "$TMP/pstack/docs" "$ROOT/docs"
-replace_dir "$TMP/pstack/agents" "$ROOT/agents"
 
 sync_rest tstack "$tstack_sha" "$TSTACK_REPO"
 sync_rest pstack "$pstack_sha" "$PSTACK_REPO"

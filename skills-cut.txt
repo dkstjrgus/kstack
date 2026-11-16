@@ -1,0 +1,59 @@
+# Upstream skills left out of skills/. scripts/sync-upstream.sh skips them.
+# Delete a line to bring a skill back on the next sync.
+# Reasons for each are in the plan doc's Trim proposal.
+
+# Merged into skills/principles
+principle-attack-the-premise
+principle-fix-root-causes
+principle-prove-it-works
+principle-explain-the-number
+principle-never-block-on-the-human
+principle-subtract-before-you-add
+principle-build-the-lever
+principle-guard-the-context-window
+
+# poteto-mode and its setup
+poteto-mode
+poteto-help
+setup-pstack
+
+# Code design, review and testing
+architect
+arena
+interrogate
+swarm
+blast-radius
+benchmark-checklist
+correct
+tdd
+typescript-best-practices
+no-comments
+
+# Formal verification and app testing
+statechart
+create-verification-skill
+maintain-verification-skill
+create-formal-verification-skill
+maintain-formal-verification-skill
+
+# Cursor-only or needs video tooling
+make-bot-ui
+ketchup-video
+
+# Code-only principles
+principle-laziness-protocol
+principle-sequence-verifiable-units
+principle-encode-lessons-in-structure
+principle-experience-first
+principle-redesign-from-first-principles
+principle-exhaust-the-design-space
+principle-foundational-thinking
+principle-model-the-domain
+principle-boundary-discipline
+principle-type-system-discipline
+principle-make-operations-idempotent
+principle-migrate-callers-then-delete-legacy-apis
+principle-minimize-reader-load
+principle-outcome-oriented-execution
+principle-separate-before-serializing-shared-state
+principle-test-behavior-not-implementation
