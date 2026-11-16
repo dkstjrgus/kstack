@@ -79,7 +79,8 @@ reproduction, a screenshot. Use the most direct proof the change allows:
   converted file), open the finished file the way its reader will see it.
   Check that it opens and renders, that every fact and figure matches its
   source, and that it covers everything the request asked for. A file that
-  only looks right in its source form is not proof.
+  only looks right in its source form is not proof. Run the `unslop` skill
+  over its prose before you call it done.
 
 When you cannot find a way to prove a change, you do not have full confidence.
 Ask the user.

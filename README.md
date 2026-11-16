@@ -21,6 +21,12 @@ tstack whole and only the parts of pstack that fit that work.
 - **`principles`**, eight of pstack's principles merged into one skill and
   widened from code to any work.
 
+**`unslop` is the center of the stack.** It cuts AI tells from writing, and it
+makes outputs much easier to read. Agents can call it on their own, and
+`full-send`, `council`, `file-pr`, `leaving-pr-comments`, `figure-it-out`,
+`technical-writing`, `teach`, and `automate-me` all run written output through
+it.
+
 [skills-cut.txt](skills-cut.txt) lists the 44 pstack skills left out. The sync
 script skips them; delete a line to bring one back. `upstream/` keeps
 everything else each project ships, including pstack's guide and subagents,

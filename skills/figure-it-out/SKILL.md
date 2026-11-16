@@ -47,6 +47,6 @@ Log the run via the **show-me-your-work** skill. figure-it-out's work is usually
 
 ## Phase E: Verify and hand back
 
-Check the whole against the Phase A definition of done on the real result, not just the check you built. If you made the same correction twice, turn it into a checklist, template, or script, or run the **reflect** skill.
+Check the whole against the Phase A definition of done on the real result, not just the check you built. Run the **unslop** skill over every piece of prose you hand back. If you made the same correction twice, turn it into a checklist, template, or script, or run the **reflect** skill.
 
 **Reply:** the playbook you designed, the rigor level and why, the decision-trail path, what's verified against the predicate, and what's still open.

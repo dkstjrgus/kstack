@@ -40,7 +40,7 @@ For a document review, ask each delegate to score it out of 10 against:
   didn't.
 - **Structure:** a reader finds the answer first and can follow the rest.
 - **Clarity:** plain words, short sentences, no filler, for its intended
-  reader.
+  reader. Delegates flag any AI tells the `unslop` skill lists.
 
 Give delegates the document as its reader sees it (rendered, not source) and
 the sources it draws on.

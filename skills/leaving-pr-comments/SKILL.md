@@ -18,6 +18,8 @@ Actual comment starts here.
 Use the verified public name of the model that wrote the comment, and the
 user's name or GitHub login.
 
+Write the comment itself through the `unslop` skill.
+
 If the harness does not expose a model name, use the harness name. Do not guess.
 
 Before posting, check the entire comment, including quoted text and
