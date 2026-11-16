@@ -12,15 +12,15 @@ and explore new ideas, skip fixes to code being replaced.
 
 Bring in three delegates to help with the user's request, usually for review
 or feedback. If the user's instructions name council members, use
-those. Otherwise pick the from the following default list.
+those. Otherwise pick from the following default list.
 
 - Claude Opus 5.5 ('high')
 - Codex GPT-6 Astra ('medium')
-- Codex GPT-6.1 Sol {'high')
+- Codex GPT-6.1 Sol ('high')
 
 In T3 Code, use `orchestrator_capabilities` to resolve the models, then
 `delegate_task` to start one delegate per model in parallel. Elsewhere, use
-the harness's subagent tools. If you cannot reach three providers, or a named
+the harness's subagent tools. If you cannot reach providers, or a named
 member is unavailable, report it instead of substituting.
 
 Give each delegate the request and relevant context. For review or feedback,
