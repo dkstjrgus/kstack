@@ -23,7 +23,7 @@ tstack whole and only the parts of pstack that fit that work.
 
 **`unslop` is the center of the stack.** It cuts AI tells from writing, and it
 makes outputs much easier to read. Agents can call it on their own, and
-`full-send`, `file-pr`, `leaving-pr-comments`, `figure-it-out`,
+`full-send`, `council`, `file-pr`, `leaving-pr-comments`, `figure-it-out`,
 `technical-writing`, `teach`, and `automate-me` all run written output through
 it.
 
